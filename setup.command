@@ -154,7 +154,7 @@ else
 	sudo adduser --disabled-password --gecos "" $AESYS_USERNAME
 fi
 [ -f "$SUDOERS_CONF_FILE" ] && echo "Sudoers exist [skiped]" || echo "$AESYS_USERNAME ALL=(ALL) NOPASSWD:ALL" | sudo tee "$SUDOERS_CONF_FILE"
-[ -f "/home/$AESYS_USERNAME/.ssh" ] && echo "Dir .ssh exist [skiped]" || sudo mkdir "/home/$AESYS_USERNAME/.ssh"
+[ -d "/home/$AESYS_USERNAME/.ssh" ] && echo "Dir .ssh exist [skiped]" || sudo mkdir "/home/$AESYS_USERNAME/.ssh"
 sudo chmod 755 "/home/$AESYS_USERNAME"
 sudo chmod -R 700 "/home/$AESYS_USERNAME/.ssh"
 sudo chown -R "$AESYS_USERNAME":"$AESYS_USERNAME" "/home/$AESYS_USERNAME/.ssh"
