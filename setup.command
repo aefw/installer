@@ -133,6 +133,12 @@ sudo systemctl restart php5.6-fpm
 sudo systemctl restart php7.4-fpm
 sudo systemctl restart php8.1-fpm
 
+sudo mkdir -p     "/home/$AESYS_USERNAME/logs/apache2"
+sudo mkdir -p     "/home/$AESYS_USERNAME/logs/nginx"
+sudo chmod -R 777 "/home/$AESYS_USERNAME/logs"
+sudo mkdir        "/home/$AESYS_USERNAME/tmp"
+sudo chmod -R 777 "/home/$AESYS_USERNAME/tmp"
+
 
 #
 # END Configuration System
